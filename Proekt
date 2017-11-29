@@ -54,7 +54,7 @@ public class Pozycja
         void WyszukajPoTytule(string tytul);
         void WyszukajPoid(int id);
 }
-    public class Pozycja
+   abstract public class Pozycja
     {
         protected string tytul;
         protected int id;
@@ -71,10 +71,8 @@ public class Pozycja
             this.wydawnictwo = wydawnictwo;
             this.rokWydania = rokWydania;
         }
-        public void WypiszInfo()
-        {
-            Console.WriteLine("Id:{0}, tytul:{1}, wydawnictwo:{2},rokWydania{3}",this.id,this.tytul,this.wydawnictwo,this.rokWydania);
-        }
+        abstract public void WypiszInfo();
+        
         public string PobierzTytul()
         {
             return this.tytul;
@@ -99,7 +97,7 @@ public class Pozycja
             this.rokWydania = rokWydania;
             this.numer = numer;
         }
-        public void WypiszInfo()
+        public override void WypiszInfo()
         {
             Console.WriteLine("Id:{0}, tytul:{1}, wydawnictwo:{2},rokWydania{3}, numer{4}", this.id, this.tytul, this.wydawnictwo, this.rokWydania,this.numer);
         }
@@ -120,7 +118,7 @@ public class Pozycja
             this.rokWydania = rokWydania;
             this.numer = numer;
         }
-        public void WypiszInfo()
+        public override void WypiszInfo()
         {
 
         }
