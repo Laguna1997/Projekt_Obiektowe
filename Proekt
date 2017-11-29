@@ -125,4 +125,5 @@ public class Pozycja
 
         }
     }
+    
 dokończyć kostruktor w ksiazce i zrobic wypiszInfo
