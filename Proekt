@@ -5,6 +5,68 @@
         void WyszukajPoTytule(string tytul);
         void WyszukajPoid(int id);
     }
+    class Katalog:IZarzadzanie
+    {
+        private string dzialTematyczny;
+        //private List<Pozycja>;
+
+
+
+        public Katalog(string newKatalog) 
+        {
+        
+        }
+        public void DodajPozycje(string,int,string,int,int,string,string,string)
+        {
+        
+        }
+        public void DodajPozycje(string,int,string,int,int)
+        {
+        
+        }
+        
+        public void WypiszWszystko()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void WyszukajPoTytule(string tytul)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void WyszukajPoid(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
+    
+     class Autor
+    {
+        private string narodowosc;
+        public Autor();
+        public Autor(string,string,string);
+
+        public string PobierzAutora(){
+        return "0";
+        
+        }
+    
+    
+    
+    
+    
+    
+    //--------------------------------------------------------------------------------------------------
+    
+    
+    
+    
+    
+    
+    
+    
+    
 public class Pozycja
     {
         protected string tytul;
