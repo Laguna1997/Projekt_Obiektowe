@@ -5,68 +5,6 @@
         void WyszukajPoTytule(string tytul);
         void WyszukajPoid(int id);
     }
-    class Katalog:IZarzadzanie
-    {
-        private string dzialTematyczny;
-        //private List<Pozycja>;
-
-
-
-        public Katalog(string newKatalog) 
-        {
-        
-        }
-        public void DodajPozycje(string,int,string,int,int,string,string,string)
-        {
-        
-        }
-        public void DodajPozycje(string,int,string,int,int)
-        {
-        
-        }
-        
-        public void WypiszWszystko()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void WyszukajPoTytule(string tytul)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void WyszukajPoid(int id)
-        {
-            throw new NotImplementedException();
-        }
-    }
-    
-     class Autor
-    {
-        private string narodowosc;
-        public Autor();
-        public Autor(string,string,string);
-
-        public string PobierzAutora(){
-        return "0";
-        
-        }
-    
-    
-    
-    
-    
-    
-    //--------------------------------------------------------------------------------------------------
-    
-    
-    
-    
-    
-    
-    
-    
-    
 public class Pozycja
     {
         protected string tytul;
@@ -95,5 +33,83 @@ public class Pozycja
         public int PobierzId()
         {
             return this.id;
+        }
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    interface IZarzadzanie
+    {
+        void WypiszWszystko();
+        void WyszukajPoTytule(string tytul);
+        void WyszukajPoid(int id);
+}
+    public class Pozycja
+    {
+        protected string tytul;
+        protected int id;
+        protected string wydawnictwo;
+        protected int rokWydania;
+        public Pozycja()
+        {
+
+        }
+        public Pozycja(string tytul,int id,string wydawnictwo,int rokWydania)
+        {
+            this.tytul = tytul;
+            this.id = id;
+            this.wydawnictwo = wydawnictwo;
+            this.rokWydania = rokWydania;
+        }
+        public void WypiszInfo()
+        {
+            Console.WriteLine("Id:{0}, tytul:{1}, wydawnictwo:{2},rokWydania{3}",this.id,this.tytul,this.wydawnictwo,this.rokWydania);
+        }
+        public string PobierzTytul()
+        {
+            return this.tytul;
+        }
+        public int PobierzId()
+        {
+            return this.id;
+        }
+    }
+    public class Czasopismo:Pozycja
+    {
+        private int numer;
+        public Czasopismo()
+        {
+
+        }
+        public Czasopismo(string tytul,int id,string wydawnictwo,int rokWydania,int numer):base(tytul,id,wydawnictwo,rokWydania)
+        {
+            this.tytul = tytul;
+            this.id = id;
+            this.wydawnictwo = wydawnictwo;
+            this.rokWydania = rokWydania;
+            this.numer = numer;
+        }
+        public void WypiszInfo()
+        {
+            Console.WriteLine("Id:{0}, tytul:{1}, wydawnictwo:{2},rokWydania{3}, numer{4}", this.id, this.tytul, this.wydawnictwo, this.rokWydania,this.numer);
+        }
+    }
+    public class Ksiazka:Pozycja,Autor
+    {
+        private int liczbaStron;
+       
+        public Ksiazka()
+        {
+
+        }
+        public Ksiazka(string tytul,int id,string wydawnictwo,int rokWydania,int numer):base(tytul,id,wydawnictwo,rokWydania)
+        {
+            this.tytul = tytul;
+            this.id = id;
+            this.wydawnictwo = wydawnictwo;
+            this.rokWydania = rokWydania;
+            this.numer = numer;
+        }
+        public void WypiszInfo()
+        {
+
         }
     }
