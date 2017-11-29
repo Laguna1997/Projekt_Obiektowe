@@ -1,1 +1,7 @@
 
+ interface IZarzadzanie
+    {
+        void WypiszWszystko();
+        void WyszukajPoTytule(string tytul);
+        void WyszukajPoid(int id);
+    }
