@@ -1,3 +1,40 @@
+class Katalog:IZarzadzanie
+    {
+        private string dzialTematyczny;
+        //private List<Pozycja>;
+
+
+
+        public Katalog(string newKatalog) 
+        {
+        
+        }
+        public void DodajPozycje(string,int,string,int,int,string,string,string)
+        {
+        
+        }
+        public void DodajPozycje(string,int,string,int,int)
+        {
+        
+        }
+        
+        public void WypiszWszystko()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void WyszukajPoTytule(string tytul)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void WyszukajPoid(int id)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
 
  interface IZarzadzanie
     {
