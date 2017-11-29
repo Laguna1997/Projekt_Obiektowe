@@ -35,6 +35,18 @@ public class Pozycja
             return this.id;
         }
     }
+     class Autor
+    {
+        private string narodowosc;
+        public Autor();
+        public Autor(string,string,string);
+
+        public string PobierzAutora(){
+        return "0";
+        
+        }
+    
+    
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     interface IZarzadzanie
     {
